@@ -1016,7 +1016,7 @@ static void gui_set_window_title(const char* title)
 static void gui_update_window_title(void)
 {
     char* temp = "";
-    if (pref_get_show_path_in_title())
+    if (pref_get_show_path_in_title() && Folder != NULL)
         temp = g_strdup_printf("%s  —  ", Folder);
     
     temp = g_strdup_printf("%s %s", temp, AppDisplayName);
