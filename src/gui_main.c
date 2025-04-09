@@ -429,6 +429,7 @@ void gui_tree_load_and_display(const char* folder)
     tree_t* tree = gui_tree_load(folder, 0);
     if (tree)
     {
+        Folder = folder;
         tree_info_t* info = tree_info_create(tree);
         gui_tree_display(info, TRUE, TRUE);
     }
